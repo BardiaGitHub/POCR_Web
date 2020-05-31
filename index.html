@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Portable OCR</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/resume.min.css" rel="stylesheet">
+  <link href="css/styles-new.css" rel="stylesheet">
+</head>
+
+<body id="page-top">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+    <a class="navbar-brand js-scroll-trigger" href="#page-top">
+      <span class="d-block d-lg-none">Portable OCR</span>
+      <span class="d-none d-lg-block">
+        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.png" alt="">
+      </span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#about">Home</a>
+        </li>
+        <li class="nav-item userNO" style="display: none;">
+          <a class="nav-link js-scroll-trigger" href="#section">Sign in</a>
+        </li>
+        <li class="nav-item userYES" style="display: none;">
+          <a class="nav-link js-scroll-trigger" href="#section">Your texts</a>
+        </li>
+        <li class="nav-item userYES" style="display: none;">
+          <a href="#" class="nav-link" id="signOut">Sign out</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container-fluid p-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
+      <div class="w-100">
+        <h1 class="mb-0">Portable
+          <span class="text-primary">OCR</span>
+        </h1>
+        <div class="subheading mb-5">
+          Your personal OCR · Only with your smartphone :)
+        </div>
+        <p class="lead mb-5">Scan your physical documents to convert them to digital and editable documents and carry 'em wherever you want only with a smartphone and a computer.</p>
+      </div>
+    </section>
+
+    <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center notLoggedIn" id="section">
+      <div style="display: none;" id="signin">
+        <h2 class="mb-5">Sign
+          <span class="text-primary">in</span>
+        </h2>
+        <div class="subheading mb-5">
+          POCR · Your personal OCR · Only with your smartphone :)
+        </div>
+        <div>
+          <form id="login-form" method="post" enctype="multipart/form-data">
+            <div class="formSignIn">
+              <label for="uname"><b>Email</b></label>
+              <input type="text" placeholder="Enter Username" name="mail" id="mail" required>
+
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+              <button type="submit">Login</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div id="texts" style="display: none;">
+        <h2 class="mb-5">Your Texts</h2>
+        <div class="textContainer">
+
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Firebase -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-analytics.js"></script>
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyALLWM-T3zEeefOkB0_zXwYZJSY3cgSSgM",
+        authDomain: "pocr-621dc.firebaseapp.com",
+        databaseURL: "https://pocr-621dc.firebaseio.com",
+        projectId: "pocr-621dc",
+        storageBucket: "pocr-621dc.appspot.com",
+        messagingSenderId: "917061088969",
+        appId: "1:917061088969:web:15b32cdc852a386ed2bf18",
+        measurementId: "G-T0EN1E46L5"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+
+    const auth = firebase.auth();
+    var database = firebase.database();
+    </script>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/resume.min.js"></script>
+  <script src="js/index_script.js"></script>
+
+</body>
+
+</html>
